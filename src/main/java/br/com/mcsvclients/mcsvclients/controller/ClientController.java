@@ -60,7 +60,7 @@ public class ClientController {
                 return ResponseEntity.ok(new DataResponse(output));
             }
             return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
-        } catch (ClassCastException ce) {
+        } catch (ClientException ce) {
             return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new DataResponse(new Error(ce.getMessage())));
         } catch (Exception e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new DataResponse(new Error(INTERNAL_ERROR_MSG)));
