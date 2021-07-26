@@ -2,7 +2,7 @@
 FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y postgresql
-s
+
 RUN    /etc/init.d/postgresql start &&\
         su - postgres &&\
         psql --command "CREATE USER builders WITH SUPERUSER PASSWORD 'docker';" &&\
