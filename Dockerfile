@@ -1,5 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM ubuntu:16.04
+FROM ubuntu
 
 RUN apt-get update && apt-get install -y postgresql
 
