@@ -1,7 +1,7 @@
 # syntax=docker/dockerfile:1
 FROM ubuntu
 
-RUN apt-get update && apt-get install -y postgresql
+RUN apt-get update && apt-get install -y postgresql &&  126
 
 RUN    /etc/init.d/postgresql start &&\
         su - postgres &&\
