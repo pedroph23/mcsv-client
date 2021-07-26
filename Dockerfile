@@ -3,8 +3,6 @@ FROM ubuntu:16.04
 
 RUN apt-get update && apt-get install -y postgresql
 
-RUN service postgresql
-
 RUN  su - postgres
 
 RUN    /etc/init.d/postgresql start &&\
