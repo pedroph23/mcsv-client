@@ -3,7 +3,7 @@
 ## 📝 Objetivo
 Olá devs! 
 
-Esse serviço propõem em fazer um gerenciamento de clientes aonde é possível:
+Esse serviço propõem em fazer um gerenciamento de clientes, aonde é possível:
 
 - Criar 
 - Alterar dados
@@ -25,22 +25,22 @@ O serviço esta deployado na nuvem do Heroku! Você pode estar encontrando esse 
 - Docker
 - Postgres DB
 - Heroku
-- -IntelliJ
+- IntelliJ
 
 ## :gear: Como inicializar
 
 Para você desenvolvedor(a), deve ter instalado em sua máquina o **Java 11** para que a aplicação funcione.
 
-Siga os passos asseguir para efetuar corretamente que sua aplicção rode em seu computador:
+Siga os passos asseguir para efetuar corretamente que a aplicação rode em seu computador:
  
  - 1º Instalando as dependências
   
  ```
  mvn clean install
  ```
- - 2º Inicializa sua aplicação
+ - 2º Inicializa a aplicação
 
-  Sua aplicação, ao incializar, deve aparecer dessa forma. A porta do servidor está apontando para a 8081
+  A  aplicação, ao incializar, deve aparecer dessa forma. A porta do servidor está apontando para a 8081
   
   ![image](https://user-images.githubusercontent.com/30670185/126930948-1fe08dbe-8e69-4480-bac9-32b73e0445b9.png)
 
@@ -70,10 +70,10 @@ Siga os passos asseguir para efetuar corretamente que sua aplicção rode em seu
   docker-compose up
   ```
   Logo em seguida você algo aparecido com esse log e isso significa que deu certo 😃 !
-  
-  Caso queira encerrar o container, apenas dê um **CTRL + C** que logo encerrará.
-  
-  
+
+![image](https://user-images.githubusercontent.com/30670185/126935064-b4f03eea-b220-47d4-acd0-538a210f7b12.png)
+
+  Caso queira encerrar o container, apenas dê um **CTRL + C** que logo encerrará.  
 
   ## Informações extra:
   
@@ -91,7 +91,7 @@ Siga os passos asseguir para efetuar corretamente que sua aplicção rode em seu
 ```
 
 
- ALém disso verifique em ter criado o Schema no seu banco de dados com o nome **builders_db**,pois atualmente o próprio serviço irá criar tabelas em base desse Schema.
+ Além disso verifique em ter criado o Schema no seu banco de dados com o nome **builders_db**,pois atualmente o próprio serviço irá criar tabelas em base desse Schema.
  
  
  Espero ter ajudado ! Qualquer informção deixa na aba **Issues** que GitHub disponibiliza para identificação de erros no sistema.
