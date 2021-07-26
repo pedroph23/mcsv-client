@@ -51,7 +51,7 @@ public class ClientServiceImplTest extends Mockito {
         ClientServiceImpl clientService = new ClientServiceImpl(repository);
 
         Client clientTest = new Client("", "", Collections.emptyList());
-        ClientOutput clientOutputTest = new ClientOutput("", "", Collections.emptyList());
+        ClientOutput clientOutputTest = new ClientOutput(null, "", "", Collections.emptyList());
 
         Optional<Client> client = Optional.of(clientTest);
 
@@ -79,7 +79,7 @@ public class ClientServiceImplTest extends Mockito {
         addresses.add(address);
 
         Client clientTest = new Client("", "", addresses);
-        ClientOutput clientOutputTest = new ClientOutput("", "", addressList);
+        ClientOutput clientOutputTest = new ClientOutput(null, "", "", addressList);
 
         Optional<Client> client = Optional.of(clientTest);
 
@@ -125,7 +125,7 @@ public class ClientServiceImplTest extends Mockito {
         AddressOutput addressOutputTest = new AddressOutput();
         addressOutputsTest.add(addressOutputTest);
 
-        ClientOutput clientOutputTest = new ClientOutput("", "", addressOutputsTest);
+        ClientOutput clientOutputTest = new ClientOutput(null, "", "", addressOutputsTest);
         clientOutputsTest.add(clientOutputTest);
 
         List<ClientOutput> clientList = clientService.listAll();

@@ -6,6 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.ArgumentMatchers.anyList;
+import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.Matchers.anyString;
 
 public class ClientOutputTest {
@@ -20,7 +21,7 @@ public class ClientOutputTest {
     @Test
     @Description("Validando o construtor com parametros do objeto ClientOutput")
     public void testConstructorWithParam() {
-        ClientOutput client = new ClientOutput(anyString(), anyString(), anyList());
+        ClientOutput client = new ClientOutput(anyLong(), anyString(), anyString(), anyList());
         assertEquals(client, client);
     }
 

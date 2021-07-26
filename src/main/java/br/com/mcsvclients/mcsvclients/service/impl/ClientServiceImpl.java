@@ -41,7 +41,7 @@ public class ClientServiceImpl implements ClientService {
                addressOutputs.add(new AddressOutput(add.getId(), add.getCity(), add.getStreet(), add.getNumber(), add.getCep()));
            }
 
-           return new ClientOutput(clientResult.getName(), clientResult.getCpf(), addressOutputs);
+           return new ClientOutput(clientResult.getId(), clientResult.getName(), clientResult.getCpf(), addressOutputs);
        }
 
        throw new ClientException("Cliente com id ("+ id +"), não identificado");
@@ -65,7 +65,7 @@ public class ClientServiceImpl implements ClientService {
                     addressOutputs.add(new AddressOutput(address.getId(), address.getCity(), address.getStreet(), address.getNumber(), address.getCep()));
                 });
 
-                clientOutputs.add(new ClientOutput(client.getName(), client.getCpf(), addressOutputs));
+                clientOutputs.add(new ClientOutput(client.getId(),client.getName(), client.getCpf(), addressOutputs));
             });
             return clientOutputs;
 
