@@ -7,8 +7,9 @@ RUN service postgresql
 
 RUN  su - postgres
 
-RUN  psql --command "CREATE USER builders WITH SUPERUSER PASSWORD 'docker';" &&\
-    createdb -O builders docker
+RUN    /etc/init.d/postgresql start &&\
+        psql --command "CREATE USER builders WITH SUPERUSER PASSWORD 'docker';" &&\
+        createdb -O docker docker
 
 
 # Adjust PostgreSQL configuration so that remote connections to the
