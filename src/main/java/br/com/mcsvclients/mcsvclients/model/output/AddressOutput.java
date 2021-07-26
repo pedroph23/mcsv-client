@@ -22,4 +22,6 @@ public class AddressOutput {
         this.number = number;
         this.cep = cep;
     }
+
+    public AddressOutput() {}
 }

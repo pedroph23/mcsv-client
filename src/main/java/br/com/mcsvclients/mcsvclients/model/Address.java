@@ -15,23 +15,27 @@ public class Address implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @NonNull
     @Column(name = "city")
     private String city;
 
-    @NonNull
     @Column(name = "street")
     private String street;
 
-    @NonNull
     @Column(name = "number")
     private String number;
 
-    @NonNull
     @Column(name = "cep")
     private String cep;
 
     public Address() {
 
+    }
+
+    public Address(Long id, @NonNull String city, @NonNull String street, @NonNull String number, @NonNull String cep) {
+        this.id = id;
+        this.city = city;
+        this.street = street;
+        this.number = number;
+        this.cep = cep;
     }
 }

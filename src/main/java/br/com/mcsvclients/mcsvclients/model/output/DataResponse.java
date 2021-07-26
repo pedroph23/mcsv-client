@@ -9,4 +9,7 @@ public class DataResponse <T>{
     public DataResponse(T data) {
         this.data = data;
     }
+
+    public DataResponse() {
+    }
 }

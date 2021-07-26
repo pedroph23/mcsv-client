@@ -18,5 +18,12 @@ public class ClientInput {
 
     public List<AddressInput> addresses;
 
+    public ClientInput(Long id, String name, String cpf, List<AddressInput> addresses) {
+        this.id = id;
+        this.name = name;
+        this.cpf = cpf;
+        this.addresses = addresses;
+    }
 
+    public ClientInput() { }
 }

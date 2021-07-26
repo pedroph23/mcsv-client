@@ -22,4 +22,6 @@ public class ClientOutput implements Serializable {
         this.cpf = cpf;
         this.addresses = addresses;
     }
+
+    public ClientOutput() {}
 }

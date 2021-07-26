@@ -9,4 +9,6 @@ public class Error {
     public Error(String msg) {
         this.msg = msg;
     }
+
+    public Error() { }
 }

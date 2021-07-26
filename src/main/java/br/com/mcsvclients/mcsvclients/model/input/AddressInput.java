@@ -14,4 +14,12 @@ public class AddressInput {
 
     public String cep;
 
+    public AddressInput(String city, String street, String number, String cep) {
+        this.city = city;
+        this.street = street;
+        this.number = number;
+        this.cep = cep;
+    }
+
+    public AddressInput() { }
 }

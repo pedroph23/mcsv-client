@@ -15,6 +15,7 @@ import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.HttpServerErrorException;
 
 import java.util.List;
 
@@ -41,7 +42,7 @@ public class ClientController {
     public ResponseEntity<DataResponse<List<ClientOutput>>> listAll() {
         try {
             return ResponseEntity.ok(new DataResponse(this.clientService.listAll()));
-        } catch (Exception e) {
+        } catch (HttpServerErrorException.InternalServerError e) {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(new DataResponse(new Error(INTERNAL_ERROR_MSG)));
         }
     }
@@ -110,7 +111,7 @@ public class ClientController {
             @ApiResponse(code = 500, message = "Internal Server Error"  , response = Error.class)
     })
     @PutMapping("/{id}")
-    public ResponseEntity update(@RequestBody ClientInput clientInput, @PathVariable Long id) throws ClientException {
+    public ResponseEntity update(@RequestBody ClientInput clientInput, @PathVariable Long id) {
         try {
             this.clientService.create(clientInput, id);
             return ResponseEntity.ok().build();

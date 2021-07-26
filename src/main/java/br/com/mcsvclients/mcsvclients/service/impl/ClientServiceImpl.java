@@ -49,7 +49,6 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void delete(Long id) throws ClientException {
-//        this.getById(id);
         this.clientRepository.deleteById(id);
     }
 
@@ -92,7 +91,7 @@ public class ClientServiceImpl implements ClientService {
         }
     }
 
-    public List<Address> convertInputToAddress (List<AddressInput> inputList) throws ClientException {
+    private List<Address> convertInputToAddress (List<AddressInput> inputList) throws ClientException {
 
         List<Address> addresses = new ArrayList<>();
         Address address = new Address();
